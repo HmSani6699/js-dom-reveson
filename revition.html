@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1 -->
+    <button
+        onclick="document.body.style.backgroundColor='yellow'">yellow</button>
+    <!-- 2 -->
+    <button onclick="black()">black</button>
+    <!-- 3 -->
+    <button id="red">red</button>
+    <!-- 4 -->
+    <button id="bluebutton">blue</button>
+    <!-- 5 -->
+    <button id="skyBlue">skyblue</button>
+    <!-- 6 -->
+    <button id="orange">orange</button>
+    <button id="yallow">Yellow</button>
+    <script>
+        //2
+        function black() {
+            document.body.style.backgroundColor = 'black'
+        }
+        //3
+        const redbutton = document.getElementById('red');
+        redbutton.onclick = redbtn;
+        function redbtn() {
+            document.body.style.backgroundColor = 'red'
+        }
+        //4
+        const bluebutton = document.getElementById('bluebutton');
+        bluebutton.onclick = function redbtn() {
+            document.body.style.backgroundColor = 'blue'
+        };
+        //5
+        const skyBlue = document.getElementById('skyBlue');
+        skyBlue.addEventListener('click', skyBlueBtn);
+        function skyBlueBtn() {
+            document.body.style.backgroundColor = 'skyblue'
+        }
+        //6
+        const orange = document.getElementById('orange');
+        orange.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'orange'
+        })
+        //7
+        document.getElementById('yallow').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'yellow'
+        })
+
+    </script>
+</body>
+
+</html>

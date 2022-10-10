@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1 -->
+    <button
+        onclick="document.body.style.backgroundColor='blue'">make
+        gren</button>
+    <!-- 2 -->
+    <button onclick="redbutton()">click me
+        red</button>
+    <!-- 3 -->
+    <button id="blackButton">black</button>
+    <!-- 4 -->
+    <button id="orange">Orange</button>
+    <!-- 5 -->
+    <button id="lightblue">lighblue</button>
+    <!-- 6 -->
+    <button id="skyblue">skyblue</button>
+    <!-- 7 -->
+    <button id="yellow">yello</button>
+    <script>
+        //2
+        function redbutton() {
+            document.body.style.backgroundColor = 'red'
+        }
+        //3
+        const btn = document.getElementById('blackButton');
+        btn.onclick = black;
+        function black() {
+            document.body.style.backgroundColor = 'black'
+        }
+        //4
+        const orangeBtn = document.getElementById('orange');
+        orangeBtn.onclick = function () {
+            document.body.style.backgroundColor = 'orange'
+        }
+        //5
+        const light = document.getElementById('lightblue');
+        light.addEventListener('click', lightbl);
+        function lightbl() {
+            document.body.style.backgroundColor = 'lightblue'
+        }
+        //6
+        const skyBlue = document.getElementById('skyblue');
+        skyBlue.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'skyblue'
+        })
+        //7
+        document.getElementById('yellow').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'yellow'
+        })
+    </script>
+</body>
+
+</html>

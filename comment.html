@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <h3>Ami comment lakhbo</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Veritatis dolor
+            quaerat deleniti in quae error, beatae
+            aliquam repudiandae qui, commodi
+            exercitationem? Tenetur sunt cumque ex
+            voluptatem, deleniti repudiandae!
+            Nisi, consectetur!</p>
+    </div>
+    <div>
+        <textarea name="" id="text" cols="40"
+            rows="5"></textarea>
+        <br>
+        <button id="button">Submit</button>
+    </div>
+    <script>
+        document.getElementById('button').addEventListener('click', function () {
+            const comment = document.getElementById('text');
+            const p = document.createElement('p');
+            p.innerText = comment.value;
+            const continar = document.getElementById('parent');
+            continar.appendChild(p);
+            comment.value = '';
+        })
+    </script>
+</body>
+
+</html>
